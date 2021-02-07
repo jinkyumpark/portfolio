@@ -40,3 +40,19 @@ table, th, td {
 	border-collapse: collapse;
 	padding: 10px;
 }
+
+#night_day {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	font-size: 35px;
+	border:none;
+	padding:10px;
+
+	background-color:rgb(213, 32, 39);
+	color:white;
+	border-radius:50%;
+}
+#night_day:hover {
+	background-color: black;
+}
