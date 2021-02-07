@@ -5,7 +5,7 @@
 	<h1>Mathematics at SBU</h1>
 </head>
 
-<body style="background-color:rgb(40, 40, 40); color:white;">
+<body>
 	<p>This place aims to store my undergraduate mathematics knowledge. It displays what courses I took over the colleage year, and list every <strong>axiom</strong>, <strong>definition</strong>, <strong>theorem</strong>, and <strong>proofs</strong>.</p>
 
 	<div id="grid">
@@ -13,22 +13,22 @@
 	<ul>
 		<h4>Computation Based</h4>
 		<li><a href="MAT250.html">MAT 250: Foundation</a></li>
-		<li><a href="">CSE 215: Discrete Math</a></li>
-		<li><a href="">MAT 131: Calculus 1</a></li>
-		<li><a href="">MAT 132: Calculus 2</a></li>
-		<li><a href="">MAT 307: Calculus 3</a></li>
-		<li><a href="">MAT 308: Calculus 4</a></li>
+		<li><a href="CSE215.html">CSE 215: Discrete Math</a></li>
+		<li><a href="MAT131.html">MAT 131: Calculus 1</a></li>
+		<li><a href="MAT132.html">MAT 132: Calculus 2</a></li>
+		<li><a href="MAT307.html">MAT 307: Calculus 3</a></li>
+		<li><a href="MAT308.html">MAT 308: Calculus 4</a></li>
 
 		<h4>Proof Based</h4>
-		<li><a href="">MAT 319: Analysis</a></li>
-		<li><a href="">MAT 310: Linear Algebra</a></li>
-		<li><a href="">MAT 360: Geometry</a></li>
-		<li><a href="">MAT 371: Logic</a></li>
+		<li><a href="MAT319.html">MAT 319: Analysis</a></li>
+		<li><a href="MAT310.html">MAT 310: Linear Algebra</a></li>
+		<li><a href="MAT360.html">MAT 360: Geometry</a></li>
+		<li><a href="MAT371.html">MAT 371: Logic</a></li>
 
 		<h4>Applied</h4>
-		<li><a href="">AMS 102: Statistics</a></li>
-		<li><a href="">AMS 301: Combinatorics</a></li>
-		<li><a href="">AMS 310: Probability</a></li>
+		<li><a href="AMS102.html">AMS 102: Statistics</a></li>
+		<li><a href="AMS301.html">AMS 301: Combinatorics</a></li>
+		<li><a href="AMS310.html">AMS 310: Probability</a></li>
 	</ul>
 		</div>
 		<div class="rightbox">
@@ -68,15 +68,32 @@
 					<li>I will use formal logic to describe proofs</li>
 					<li>I will try to use as little words as possible, and focus on symbols</li>
 				</ol>
-				<input type="button" value="Dark Mode" onclick="
-					document.querySelector('body').style.backgroundColor='rgb(40, 40, 40)';
-					document.querySelector('body').style.color='white'
-					document.querySelector('a').style.color='white'
-				">
-				<input type="button" value="Light Mode" onclick="
-					document.querySelector('body').style.backgroundColor='white';
-					document.querySelector('body').style.color='black';
-					document.querySelector('a').style.color='black'
+				<input id="night_day" type="button" value="Dark Mode" onclick="
+					var body = document.querySelector('body');
+					if(this.value === 'Dark Mode'){
+					body.style.backgroundColor='rgb(40, 40, 40)';
+
+					var subjects = document.querySelectorAll('a');
+					var i = 0;
+					while(i < links.length){
+						links[i].style.color='white';
+						i=i+1;
+					}
+					body.style.color='white';
+					this.value = 'Light Mode';
+					}else{
+					body.style.backgroundColor='white';
+
+					var subjects = document.querySelectorAll('a');
+					var i = 0;
+					while(i < links.length){
+						links[i].style.color='black';
+						i=i+1;
+					}
+
+					body.style.color='black';
+					this.value = 'Dark Mode';
+					}
 				">
 
 			</h4>
