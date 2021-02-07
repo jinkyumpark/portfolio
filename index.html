@@ -68,9 +68,9 @@
 					<li>I will use formal logic to describe proofs</li>
 					<li>I will try to use as little words as possible, and focus on symbols</li>
 				</ol>
-				<input id="night_day" type="button" value="Dark Mode" onclick="
+				<input id="night_day" type="button" value="D" onclick="
 					var body = document.querySelector('body');
-					if(this.value === 'Dark Mode'){
+					if(this.value === 'D'){
 					body.style.backgroundColor='rgb(40, 40, 40)';
 
 					var subjects = document.querySelectorAll('a');
@@ -79,8 +79,9 @@
 						links[i].style.color='white';
 						i=i+1;
 					}
+
 					body.style.color='white';
-					this.value = 'Light Mode';
+					this.value = 'L';
 					}else{
 					body.style.backgroundColor='white';
 
@@ -92,7 +93,7 @@
 					}
 
 					body.style.color='black';
-					this.value = 'Dark Mode';
+					this.value = 'D';
 					}
 				">
 
