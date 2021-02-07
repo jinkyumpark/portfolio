@@ -2,7 +2,8 @@
 <head>
 	<title>Mathematics at SBU</title>
 	<link rel="stylesheet" href="mainpage.css">
-	<h1>Mathematics at SBU</h1>
+	<h1 id="pageName">Mathematics at SBU</h1>
+	<script src="https://ajax.googleapis.com/ajax/libs/d3js/6.5.0/d3.min.js"></script>
 </head>
 
 <body>
@@ -24,6 +25,10 @@
 		<li><a href="MAT310.html">MAT 310: Linear Algebra</a></li>
 		<li><a href="MAT360.html">MAT 360: Geometry</a></li>
 		<li><a href="MAT371.html">MAT 371: Logic</a></li>
+		<li><a href="MAT322.html">MAT 322: Real Analysis</a></li>
+		<li><a href="MAT342.html">MAT 342: Complex Analysis</a></li>
+		<li><a href="MAT313.html">MAT 313: Abstract Algebra</a></li>
+
 
 		<h4>Applied</h4>
 		<li><a href="AMS102.html">AMS 102: Statistics</a></li>
@@ -63,42 +68,43 @@
 				<th>MAT 360</th>
 			</tr>
 
+
 			<h4>I will focus on proof based courses. Especially, 
 				<ol>
 					<li>I will use formal logic to describe proofs</li>
 					<li>I will try to use as little words as possible, and focus on symbols</li>
 				</ol>
-				<input id="night_day" type="button" value="D" onclick="
-					var body = document.querySelector('body');
-					if(this.value === 'D'){
-					body.style.backgroundColor='rgb(40, 40, 40)';
-
-					var subjects = document.querySelectorAll('a');
-					var i = 0;
-					while(i < links.length){
-						links[i].style.color='white';
-						i=i+1;
-					}
-
-					body.style.color='white';
-					this.value = 'L';
-					}else{
-					body.style.backgroundColor='white';
-
-					var subjects = document.querySelectorAll('a');
-					var i = 0;
-					while(i < links.length){
-						links[i].style.color='black';
-						i=i+1;
-					}
-
-					body.style.color='black';
-					this.value = 'D';
-					}
-				">
-
 			</h4>
-
 		</div>
+
+			<input id="night_day" type="button" value="D" onclick="
+				var body = document.querySelector('body');
+				if(this.value === 'D'){
+				body.style.backgroundColor='rgb(40, 40, 40)';
+
+				var subjects = document.querySelectorAll('a');
+				var i = 0;
+				while(i < links.length){
+					links[i].style.color='white';
+					i=i+1;
+				}
+
+				body.style.color='white';
+				this.value = 'L';
+				}else{
+				body.style.backgroundColor='white';
+
+				var subjects = document.querySelectorAll('a');
+				var i = 0;
+				while(i < links.length){
+					links[i].style.color='black';
+					i=i+1;
+				}
+
+				body.style.color='black';
+				this.value = 'D';
+				}
+			">
+
 	</div>
 </body>
