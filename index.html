@@ -2,7 +2,7 @@
 <head>
 	<title>Mathematics at SBU</title>
 	<link rel="stylesheet" href="mainpage.css">
-	<h1 id="pageName"><a href="index.php">Mathematics at SBU</a></h1>
+	<h1 id="pageName">Mathematics at SBU</h1>
 	<script src="https://ajax.googleapis.com/ajax/libs/d3js/6.5.0/d3.min.js"></script>
 </head>
 
@@ -13,42 +13,68 @@
 		<div>
 	<ul>
 		<h4>Computation Based</h4>
-		<li><a href="index.php?id=MAT250">MAT 250: Foundation</a></li>
-		<li><a href="index.php?id=CSE215">CSE 215: Discrete Math</a></li>
-		<li><a href="index.php?id=MAT131">MAT 131: Calculus 1</a></li>
-		<li><a href="index.php?id=MAT132">MAT 132: Calculus 2</a></li>
-		<li><a href="index.php?id=MAT307">MAT 307: Calculus 3</a></li>
-		<li><a href="index.php?id=MAT308">MAT 308: Calculus 4</a></li>
+		<li><a href="MAT250.html">MAT 250: Foundation</a></li>
+		<li><a href="CSE215.html">CSE 215: Discrete Math</a></li>
+		<li><a href="MAT131.html">MAT 131: Calculus 1</a></li>
+		<li><a href="MAT132.html">MAT 132: Calculus 2</a></li>
+		<li><a href="MAT307.html">MAT 307: Calculus 3</a></li>
+		<li><a href="MAT308.html">MAT 308: Calculus 4</a></li>
 
 		<h4>Proof Based</h4>
-		<li><a href="index.php?id=MAT319">MAT 319: Analysis</a></li>
-		<li><a href="index.php?id=MAT310">MAT 310: Linear Algebra</a></li>
-		<li><a href="index.php?id=MAT360">MAT 360: Geometry</a></li>
-		<li><a href="index.php?id=MAT371">MAT 371: Logic</a></li>
-		<li><a href="index.php?id=MAT322">MAT 322: Real Analysis</a></li>
-		<li><a href="index.php?id=MAT342">MAT 342: Complex Analysis</a></li>
-		<li><a href="index.php?id=MAT313">MAT 313: Abstract Algebra</a></li>
+		<li><a href="MAT319.html">MAT 319: Analysis</a></li>
+		<li><a href="MAT310.html">MAT 310: Linear Algebra</a></li>
+		<li><a href="MAT360.html">MAT 360: Geometry</a></li>
+		<li><a href="MAT371.html">MAT 371: Logic</a></li>
+		<li><a href="MAT322.html">MAT 322: Real Analysis</a></li>
+		<li><a href="MAT342.html">MAT 342: Complex Analysis</a></li>
+		<li><a href="MAT313.html">MAT 313: Abstract Algebra</a></li>
 
 
 		<h4>Applied</h4>
-		<li><a href="index.php?id=AMS102">AMS 102: Statistics</a></li>
-		<li><a href="index.php?id=AMS301">AMS 301: Combinatorics</a></li>
-		<li><a href="index.php?id=AMS310">AMS 310: Probability</a></li>
+		<li><a href="AMS102.html">AMS 102: Statistics</a></li>
+		<li><a href="AMS301.html">AMS 301: Combinatorics</a></li>
+		<li><a href="AMS310.html">AMS 310: Probability</a></li>
 	</ul>
 		</div>
 		<div class="rightbox">
 
-		<h3 id="subjectSelected">
-			<?php
-				echo $_GET['id'];
-			?>
-		</h3>
+		<h3 id="subjectSelected">Select Subject</h3>
 
-		<?php
-		echo file_get_contents("data/".$_GET['id']);
-		?>
+		<h4>It is possible to classify mathematics courses I've taken as computation based and proof based.</h4>
 
-		
+		<table>
+			<tr>
+				<th>Computation</th>
+				<th>Proof</th>
+			</tr>
+			<tr>
+				<th>MAT 250</th>
+				<th>MAT 371</th>
+			</tr>
+			<tr>
+				<th>MAT 131+132</th>
+				<th>MAT 319</th>
+			</tr>
+			<tr>
+				<th>MAT 307</th>
+				<th>MAT 322</th>
+			</tr>
+			<tr>
+				<th>MAT 307+308</th>
+				<th>MAT 310</th>
+			</tr>
+			<tr>
+				<th>High School Geometry</th>
+				<th>MAT 360</th>
+			</tr>
+
+
+			<h4>I will focus on proof based courses. Especially, 
+				<ol>
+					<li>I will use formal logic to describe proofs</li>
+					<li>I will try to use as little words as possible, and focus on symbols</li>
+				</ol>
+			</h4>
 		</div>
 
 			<input id="night_day" type="button" value="D" onclick="
